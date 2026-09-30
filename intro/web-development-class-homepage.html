@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Development 340 | Build for the Web</title>
+  <meta name="description" content="Homepage for a college-level web development class.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top"><span class="brand-mark">&lt;/&gt;</span><span>Web Development 201</span></a>
+      <button class="menu" aria-label="Open navigation">☰</button>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#schedule">Schedule</a><a href="#resources">Resources</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Fall 2026 · Tuesdays & Thursdays</div>
+          <h2>Build things for the <span>open web.</span></h2>
+          <p class="lead">A hands-on introduction to the tools, technologies, and thinking behind modern websites. Start with the fundamentals, then ship a portfolio-worthy project.</p>
+          <div class="actions"><a class="button primary" href="#schedule">View the schedule →</a><a class="button secondary" href="#resources">Explore resources</a></div>
+          <div class="stats"><div class="stat"><strong>10</strong>Weeks of making</div><div class="stat"><strong>3</strong><small>Core technologies</small></div><div class="stat"><strong>1</strong><small>Final project</small></div></div>
+        </div>
+        <div class="code-window" aria-label="Example HTML code">
+          <div class="window-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+          <pre><code><span class="tag">&lt;main</span> <span class="attr">class</span>=<span class="value">"course"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h1&gt;</span><span class="text">Make it work.</span><span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span class="text">Make it clear.</span><span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;button</span> <span class="attr">id</span>=<span class="value">"launch"</span><span class="tag">&gt;</span>
+    <span class="text">Ship it →</span>
+  <span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/main&gt;</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">What you'll learn</div><h2>From blank page to working website.</h2><p>You'll learn by doing: short lessons, focused exercises, and regular feedback that turns concepts into practical skills.</p></div>
+        <div class="cards">
+          <article class="card"><div class="icon">⌘</div><h3>Think in structure</h3><p>Use semantic HTML to organize content that is accessible, meaningful, and easy to maintain.</p></article>
+          <article class="card"><div class="icon">✦</div><h3>Design with CSS</h3><p>Create responsive layouts, visual hierarchy, and polished interfaces that work on every screen.</p></article>
+          <article class="card"><div class="icon">⚡</div><h3>Program interactions</h3><p>Use JavaScript to respond to user input, manipulate the DOM, and bring your interface to life.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">Course roadmap</div><h2>A little structure goes a long way.</h2><p>Keep this roadmap nearby as you move from fundamentals to your final project.</p></div>
+        <div class="schedule-wrap">
+          <table class="schedule"><thead><tr><th>Week</th><th>Topic</th><th>Studio focus</th></tr></thead><tbody>
+          <tr><td>01 · Foundations</td><td>The web & HTML</td><td>Build a semantic profile page</td></tr>
+          <tr><td>02 · Structure</td><td>Forms & accessibility</td><td>Design an accessible sign-up flow</td></tr>
+          <tr><td>03 · Style</td><td>CSS fundamentals</td><td>Recreate a visual reference</td></tr>
+          <tr><td>04 · Layout</td><td>Flexbox & Grid</td><td>Make a responsive landing page</td></tr>
+          <tr><td>05 · Behavior</td><td>JavaScript basics</td><td>Build a browser-based tool</td></tr>
+          <tr><td>06–10 · Launch</td><td>Project sprint</td><td>Plan, build, test, and publish</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">Your toolkit</div><h2>Resources for the road.</h2><p>Curated starting points for class, studio time, and independent practice.</p></div>
+        <div class="resource-list">
+          <a class="resource" href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noreferrer"><div><b>MDN Web Docs</b><span>Trusted references and tutorials</span></div><span class="arrow">↗</span></a>
+          <a class="resource" href="https://validator.w3.org/" target="_blank" rel="noreferrer"><div><b>HTML Validator</b><span>Check your markup</span></div><span class="arrow">↗</span></a>
+          <a class="resource" href="https://web.dev/learn/css/" target="_blank" rel="noreferrer"><div><b>Learn CSS</b><span>Layout and styling guides</span></div><span class="arrow">↗</span></a>
+          <a class="resource" href="https://github.com/" target="_blank" rel="noreferrer"><div><b>GitHub</b><span>Save and share your work</span></div><span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="instructor"><div class="avatar">AR</div><div><h3>Alex Rivera · Instructor</h3><p>Office hours: Wednesdays, 2–4 PM · Room 204 or online</p></div><a class="button primary" href="mailto:instructor@example.edu">Ask a question</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© 2026 Web Development 201</span><span>Learn openly. Build thoughtfully.</span></div></footer>
+  <script>
+    const menu = document.querySelector('.menu');
+    const nav = document.querySelector('nav');
+    menu.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+  </script>
+</body>
+</html>
