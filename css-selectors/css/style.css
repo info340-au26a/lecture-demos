@@ -1,0 +1,58 @@
+header {
+  font-family: 'Helvetica';
+  color: white;
+  background-color: rebeccapurple;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+h1, h2 {
+  font-family: "Papyrus";
+  color: cyan;
+}
+
+/* h2 {
+  font-family: "Papyrus";
+  color: cyan;
+} */
+
+h2 {
+  color: rebeccapurple;
+}
+
+p {
+  font-size: 18px;
+  font-style:normal;
+}
+
+header p {
+  font-style: italic;
+}
+
+img {
+  max-height: 150px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+li.highlighted {
+  background-color: yellow;
+}
+
+.alert.success {
+
+}
+
+/* elements with class="about-section" */
+.about-section {
+  background-color: #eee;
+  padding: .25em .5em;
+}
+
+.about-section img {
+
+}
+
+li:hover {
+  color: rgb(21, 0, 128);
+}
