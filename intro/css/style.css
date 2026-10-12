@@ -1,4 +1,18 @@
-    :root {
+/* * {
+  box-sizing: border-box;
+}
+
+header::after {
+
+}
+:root {
+}
+@media {
+
+} */
+
+
+:root {
       --ink: #172033;
       --muted: #647089;
       --paper: #f7f9fc;

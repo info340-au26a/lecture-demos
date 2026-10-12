@@ -6,53 +6,52 @@ header {
   margin-bottom: 1em;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Papyrus";
-  color: cyan;
-}
-
-/* h2 {
-  font-family: "Papyrus";
-  color: cyan;
-} */
-
-h2 {
-  color: rebeccapurple;
-}
-
-p {
-  font-size: 18px;
-  font-style:normal;
 }
 
 header p {
-  font-style: italic;
+  font-size: 1.5em;
 }
+
+.about-section a {
+
+}
+
+.link-section ul li {
+  
+}
+
+a:visited {
+  color: blue;
+}
+
+li a:hover {
+  font-size: 1.5em;
+}
+
+h2:hover {
+  font-size: 2em;
+}
+
+/* h2 {
+  font-family: "Papyrus"
+}
+
+h3 {
+  font-family: "Papyrus";
+} */
 
 img {
-  max-height: 150px;
-  border-radius: 20px;
-  background-color: white;
+  border: 1px solid black;
 }
 
-li.highlighted {
-  background-color: yellow;
+img:hover {
+  border-radius: 50%;
 }
 
-.alert.success {
 
-}
-
-/* elements with class="about-section" */
 .about-section {
-  background-color: #eee;
-  padding: .25em .5em;
+  background-color: lightgrey
 }
 
-.about-section img {
-
-}
-
-li:hover {
-  color: rgb(21, 0, 128);
-}
