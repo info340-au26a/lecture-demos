@@ -7,6 +7,23 @@ h2 {
   color: rebeccapurple;
 }
 
+/* header */
+header {
+  font-size: 16px;
+}
+
+header h1 {
+  font-size: 2em;
+  padding-bottom: 2em;
+  border-bottom: 5px solid red;
+  border: 3px dashed black;
+  margin: 1em;
+}
+
+header p {
+  font-size: 1.5em;
+}
+
 
 /* nav bar */
 nav {
@@ -16,6 +33,18 @@ nav {
 
 nav a {
   color: white;
+}
+
+nav ul li {
+  display: inline;
+  padding: 1em;
+  /* background-color: gold; */
+}
+
+nav ul {
+  padding: 0; /*padding not margin*/
+  display: flex;
+  justify-content: space-around;
 }
 
 
@@ -30,8 +59,19 @@ nav a {
 
 
 /* topics cards */
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .topics-section .card {
   border: 1px solid black;
+  flex-grow: 1;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
 }
 
 .topics-section img {
