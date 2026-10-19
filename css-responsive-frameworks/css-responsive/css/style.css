@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: lightblue;
+}
+
 /* general styling */
 h1, h2, h3 {
   font-family: 'Montserrat', 'Helvetica', sans-serif;
@@ -35,7 +39,7 @@ nav a {
 
 /* main content (columns) */
 main {
-  display: flex;
+  /* display: flex; */
 }
 
 /* about section */
@@ -53,9 +57,9 @@ main {
 
 /* topics cards */
 .card-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-wrap: wrap;
+  justify-content: space-between; */
 }
 
 .topics-section .card {
@@ -70,4 +74,42 @@ main {
 /* other */
 footer {
   font-size: smaller;
+}
+
+/* breakpoints: 576, 768, 992, 1200 */
+
+/* if min width is at least 768 */
+@media (min-width: 768px) {
+  body {
+    background-color: lightpink;
+  }
+
+  .about-section img {
+    display: none;
+  }
+
+  .card-box {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex-basis: 50%;
+    background-color: white;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background-color: lightgrey;
+  }
+
+  .about-section img {
+    display: inline;
+  }
+
+  .card {
+    flex-basis: 33%;
+  }
 }
