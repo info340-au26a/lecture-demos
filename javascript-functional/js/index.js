@@ -57,14 +57,17 @@ const songObjArray = [
   { title: "What is Love?", artist: "Haddaway", youtubeUrl: "https://www.youtube.com/watch?v=HEXWRTEbj1I" },
   { title: "No Idea", artist: "Don Toliver", youtubeUrl: "https://www.youtube.com/watch?v=_r-nPqWGG6c" },
 ];
-console.log(songObjArray);
+// console.log(songObjArray);
+
+
+let isCurrentlySmall = true;
 
 //[{},{},{}] => ["", "", ""]
 const titleArtistArray = songObjArray.map(function(songObj){
   const transformed = "<li>" + songObj.artist + " - " + songObj.title + "</li>";
   return transformed;
 });
-console.log(titleArtistArray);
+// console.log(titleArtistArray);
 
 
 /** Render Functions **/
@@ -94,7 +97,7 @@ function renderSongList(aSongObjArray) {
   // aSongObjArray.forEach(addSongItem)
 
   const listItemArray = aSongObjArray.map(createSongListItem);
-  console.log(listItemArray);
+  // console.log(listItemArray);
 
   for(const songObj of aSongObjArray) {
     const newElem = createSongListItem(songObj);
@@ -109,9 +112,41 @@ const puppyImgElem = document.querySelector('#puppySection img');
 
 const puppyButton = document.querySelector('#puppySection button');
 
+
 puppyButton.addEventListener("click", function(event) {
   console.log("You clicked me!");
-  puppyImgElem.src = "img/husky.jpg";
-  puppyImgElem.alt = "a grown husky";
 
+  //1. change the state
+  //x = -1*x;
+  isCurrentlySmall = !isCurrentlySmall;
+
+
+  //2. make the page look like the state
+  if(isCurrentlySmall) {
+    puppyImgElem.src = "img/puppy.jpg";
+    puppyImgElem.alt = "a cute husky";
+  }
+  else { //currently not small
+    puppyImgElem.src = "img/husky.jpg";
+    puppyImgElem.alt = "a grown husky";
+  }
 })
+
+//FORM!!
+const formElem = document.querySelector('#formSection form');
+formElem.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log("You submitted me!");
+
+  //1. update the state data
+  const titleInputElem = document.querySelector("#titleInput");
+  const userTitle = titleInputElem.value;
+
+  const newSongObj = {artist: "", title: userTitle, youtubeUrl: ""}
+  songObjArray.push(newSongObj);
+
+  //2. re-render the content
+  renderSongList(songObjArray);
+
+});
+
