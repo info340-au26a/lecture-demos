@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#birds - React Chat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container-fluid d-flex flex-column h-100">
+      <header class="text-light bg-primary px-1 d-flex flex-wrap justify-content-between align-items-center">
+        <h1>React Chat - Live!</h1>
+        <nav aria-label="Main navigation">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="chat-birds.html" aria-current="page">Chat</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="profile.html" aria-label="Parrot profile"><img src="../public/img/Parrot.png" alt="Parrot avatar"></a></li>
+            <li class="nav-item"><button class="btn btn-secondary ms-2" type="button" disabled>Sign Out</button></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="row flex-grow-1 overflow-hidden">
+        <nav class="channel-nav col-3 h-100 bg-secondary px-0 py-3" aria-label="Chat channels">
+          <h2 class="h6 text-white px-2">Channels</h2>
+          <ul class="p-0">
+            <li><a href="chat-general.html"># general</a></li>
+            <li><a href="chat-social.html"># social</a></li>
+            <li><a href="chat-random.html"># random</a></li>
+            <li><a href="chat-birds.html" aria-current="page"># birds</a></li>
+            <li><a href="chat-dank-memes.html"># dank-memes</a></li>
+          </ul>
+        </nav>
+        <section class="col d-flex flex-column overflow-hidden">
+          <h2># birds</h2>
+          <div class="scrollable-pane pt-2 my-2">
+          </div>
+          <div class="input-group my-2" aria-label="Message composer example">
+            <img src="../public/img/Parrot.png" alt="Parrot avatar">
+            <textarea class="form-control" rows="2" aria-label="Example message" placeholder="Type a new message"></textarea>
+            <button class="btn btn-secondary" type="button" disabled aria-label="Send message">➤</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
