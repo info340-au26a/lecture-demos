@@ -1,7 +1,10 @@
+import { ChatPage } from './ChatPage.jsx';
+
 function App(props) {
 
   return (
-    <h1>Hello world</h1>
+    <ChatPage />
+    
   )
 }
 
