@@ -8,6 +8,10 @@ export default function ChatPage(props) {
  
   const channelNames = ["general", "social", "birds", "channel-4", "random"];
 
+  if(currentUser == null) {
+    return <p>You can't be here!</p>
+  }
+
   return (
     <div className="row flex-grow-1">
       <div className="col-3">
