@@ -1,4 +1,3 @@
-/** general **/
 /* hack the sizes */
 html, body, #root, #root>div {
   height: 100%;
@@ -7,30 +6,6 @@ html, body, #root, #root>div {
 .material-icons {
   position: relative;
   top: 4px;
-}
-
-
-/** Channel Nav **/
-.channel-nav ul {
-  list-style-type: none;
-}
-
-.channel-nav a {
-  color: white;
-}
-
-/** Header **/
-header img {
-  width:40px;
-  border-radius: 50%;
-}
-
-header button.user-icon {
-  padding: .25rem;
-}
-
-.highlighted {
-  border: 3px solid greenyellow;
 }
 
 /** Messages **/
@@ -65,7 +40,49 @@ header button.user-icon {
 }
 
 
+/** Channel Nav **/
+.channel-nav ul {
+  list-style-type: none;
+}
+
+.channel-nav a {
+  color: white;
+}
+
+/*** Header ***/
+header img {
+  width:40px;
+  border-radius: 50%;
+}
+
+header button.user-icon {
+  padding: .25rem;
+}
+
+.highlighted {
+  border: 3px solid greenyellow;
+}
+
 /** Compose Form **/
 textarea.form-control {
   resize: none;
+}
+
+.input-group img {
+  max-width:75px;
+}
+
+/* navlinks */
+.bg-primary .nav-link {
+  color: white;
+}
+
+.bg-primary .nav-pills .nav-link.active {
+  color: #0d6efd;
+  background-color: white;
+}
+
+header .nav-item {
+  display: flex;
+  align-items:center;
 }

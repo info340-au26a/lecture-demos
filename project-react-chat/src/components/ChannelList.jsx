@@ -1,30 +1,25 @@
 import React from 'react';
 
 export function ChannelList(props) {
-  const {channelNames, currentChannel} = props;
+  const { channelNames } = props;
 
-  const elemArray = channelNames.map((channelNameString) => {
-    let classListString = "px-2";
-    if(channelNameString === currentChannel) { //on current channel
-      classListString += " bg-warning";
-    }
-
-    const transformed = (
-      <li className={classListString} key={channelNameString}>
-        <a name={channelNameString} href={"/"+channelNameString}>
+  //render the links
+  const liArray = channelNames.map((channelNameString) => {
+    return (
+      <div key={channelNameString}>
+        <a className="px-2"
+          name={channelNameString}
+          href={"/chat/"+channelNameString}
+        >
           {channelNameString}
         </a>
-      </li>
+      </div>
     );
-
-    return transformed;
   })
 
   return (
     <nav className="channel-nav h-100 bg-secondary px-0 py-3">
-      <ul className="px-0">
-        {elemArray}
-      </ul>
+      {liArray}
     </nav>
   )
 }

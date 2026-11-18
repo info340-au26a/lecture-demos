@@ -1,35 +1,34 @@
 import React, { useState } from 'react';
 
 export function ComposeForm(props) {
-  const { currentChannel, currentUser, howToAddMessageFunc } = props;
+  const { addMessageFunction, currentChannel, currentUser } = props;
 
-  const [typedInput, setTypedInput] = useState("")
+  const [inputtedText, setInputtedText] = useState('');
 
+  //typing
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setInputtedText(value);
+  }
+
+  //submission
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log("submitting form", typedInput);
-
-    howToAddMessageFunc(currentUser, typedInput, currentChannel);
-
-    setTypedInput(""); //change what's on the board
-  }
-
-  const handleChange = (event) => {
-    const newValue = event.target.value;
-    //console.log(newValue);
-    setTypedInput(newValue);
+    addMessageFunction(currentUser, inputtedText, currentChannel);   
+    setInputtedText('');
   }
 
   return (
     <form className="my-2" onSubmit={handleSubmit}>
       <div className="input-group">
-        <textarea 
-          className="form-control" rows="2" placeholder="Type a new message"
-          value={typedInput}
+        <img src={currentUser.userImg} alt={currentUser.userName + " avatar"} />
+        <textarea className="form-control" rows="2" placeholder="Type a new message"
           onChange={handleChange}
+          value={inputtedText}
         />
-        <button type="submit" className="btn btn-secondary">
+        <button
+          className="btn btn-secondary" type="submit">
           <span className="material-icons">send</span>
         </button>
       </div>
